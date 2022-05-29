@@ -70,7 +70,7 @@ app.post("/movies/", async (request, response) => {
   const createMovieQuery = `
     INSERT INTO movie (director_id,movie_name,lead_actor)
     VALUES 
-    (${directorId},"${movieName}","${leadActor};")`;
+    (${directorId},"${movieName}","${leadActor}");`;
   await dataBase.run(createMovieQuery);
   response.send("Movie Successfully Added");
 });
